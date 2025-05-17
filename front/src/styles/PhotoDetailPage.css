@@ -1,0 +1,224 @@
+.photo-detail-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.photo-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.photo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.edit-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo-image {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.photo-image img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.photo-info {
+  padding: 20px;
+}
+
+.photo-info h1 {
+  margin-top: 0;
+  color: #333;
+}
+
+.photo-description {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.photo-metadata {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.photo-metadata p {
+  margin: 8px 0;
+}
+
+.photo-tags {
+  margin-top: 15px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag-item {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+}
+
+.tag-item:hover {
+  background-color: #e0e0e0;
+}
+
+.delete-confirm-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.confirm-button,
+.cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.confirm-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #d32f2f;
+}
+
+.cancel-button {
+  background-color: #ccc;
+  color: #333;
+}
+
+.cancel-button:hover {
+  background-color: #bbb;
+}
+
+.loading,
+.error,
+.not-found {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  color: #d9534f;
+}
+
+@media (max-width: 768px) {
+  .photo-navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .photo-actions {
+    width: 100%;
+  }
+
+  .edit-button,
+  .delete-button {
+    flex: 1;
+    text-align: center;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+}
